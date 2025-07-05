@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Weather and 5-day forecast website">
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="ayush.css">
+</head>
+<body>
+    <div id="container">
+        <div id="location">
+            <input type="text" id="country" placeholder="Country">
+            <input type="text" id="city" placeholder="City">
+            <input type="submit" id="check" value="Get Weather">
+        </div>
+
+        <div class="flex">
+            <img src="/atmosphere.svg" alt="Weather Icon" id="tempIcon">
+            <h2 id="weatherCountry">City / Country</h2>
+            <h2 id="temperature">0°<b>C</b></h2>
+            <h2 id="weatherDescription">Weather Description</h2>
+            <ul class="features">
+                <li id="feelsLike">Feels Like 0°C</li>
+                <li id="humidity">Humidity 0%</li>
+                <li id="longitude">Longitude 0.0</li>
+                <li id="latitude">Latitude 0.0</li>
+            </ul>
+        </div>
+
+        <div id="forecast">
+            <h2>5-Day Weather Forecast</h2>
+            <div id="forecastCards" class="forecast-grid">
+            </div>
+        </div>
+    </div>
+
+    <script src="ayush.js"></script> 
+</body>
+</html>

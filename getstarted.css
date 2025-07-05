@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    background: linear-gradient(to bottom, #04080f,#050606);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+.container {
+    max-width: 900px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(12px);
+    animation: fadeIn 1.5s ease-in-out;
+}
+h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+p {
+    font-size: 1.4rem;
+    margin-bottom: 25px;
+    opacity: 0.9;
+}
+.btn {
+    display: inline-block;
+    padding: 15px 35px;
+    background: #ff9800;
+    color: white;
+    font-size: 1.4rem;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.4s ease;
+    box-shadow: 0 5px 15px rgba(255, 152, 0, 0.5);
+}
+.btn:hover {
+    background: #ff5722;
+    transform: scale(1.15);
+    box-shadow: 0 8px 20px rgba(255, 87, 34, 0.6);
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+nav {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 40px;
+    font-size: 1.3rem;
+}
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+nav a:hover {
+    color: #ff9800;
+    transform: scale(1.1);
+}
+.weather-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://source.unsplash.com/1600x900/?storm,clouds') no-repeat center center/cover;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+.fade-out {
+animation: fadeOut 0.8s forwards;
+}
+
+@keyframes fadeOut {
+from { opacity: 1; }
+to { opacity: 0; }
+}
